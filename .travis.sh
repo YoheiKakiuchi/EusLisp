@@ -39,7 +39,7 @@ fi
 if [ "$TRAVIS_OS_NAME" == "osx" ]; then
 
     travis_time_start setup.install
-    brew install jpeg libpng mesalib-glw wget;
+    brew install jpeg libpng mesalib-glw wget || echo "brew"
     travis_time_end
 
 fi

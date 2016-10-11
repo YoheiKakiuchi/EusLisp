@@ -10,6 +10,7 @@ function travis_time_start {
     echo -e "\e[0Ktraivs_fold:start:$TRAVIS_FOLD_NAME"
     echo -e "\e[0Ktraivs_time:start:$TRAVIS_TIME_ID"
     set -x
+    return 0
 }
 function travis_time_end {
     set +x
@@ -20,6 +21,7 @@ function travis_time_end {
     echo -e "traivs_fold:end:$TRAVIS_FOLD_NAME"
     echo -e "\e[0K\e[${_COLOR}mFunction $TRAVIS_FOLD_NAME takes $(( $TIME_ELAPSED_SECONDS / 60 )) min $(( $TIME_ELAPSED_SECONDS % 60 )) sec\e[0m"
     set -x
+    return 0
 }
 
 if [ "$TRAVIS_OS_NAME" == "linux" ]; then 

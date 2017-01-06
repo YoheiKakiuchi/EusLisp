@@ -41,7 +41,7 @@ char *xentry;
   dlhandle=(eusinteger_t)dlopen(0, RTLD_LAZY);
   entry=(eusinteger_t)dlsym(dlhandle, xentry);
 #else
-#if (WORD_SIZE == 64) 
+#if (WORD_SIZE == 64)
   entry=(eusinteger_t)dlsym((void *)((eusinteger_t)(sysmod->c.ldmod.handle) & ~3L), xentry);
 #else
   entry=(eusinteger_t)dlsym((void *)((eusinteger_t)(sysmod->c.ldmod.handle) & ~3), xentry);

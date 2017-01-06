@@ -152,7 +152,7 @@ register pointer p;
 #if sun
   if (p<(pointer)0x10000) return(NULL);
 #endif
-#if (WORD_SIZE == 64)  
+#if (WORD_SIZE == 64)
   bp=(bpointer)((eusinteger_t)p & ~3L/*0xfffffffc*/);/* ???? */
 #else
   bp=(bpointer)((eusinteger_t)p & ~3/*0xfffffffc*/);/* ???? */

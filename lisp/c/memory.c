@@ -554,7 +554,7 @@ void markall()
       /* mark from thread's stack */
       for (p=ctx->stack; p<ctx->vsp; p++) {
 	mark_state=(long)p;
-#if (WORD_SIZE == 64)	
+#if (WORD_SIZE == 64)
 	if ((((eusinteger_t)(*p) & 7L)==0L) && 
 #else
 	if ((((eusinteger_t)(*p) & 3)==0) && 

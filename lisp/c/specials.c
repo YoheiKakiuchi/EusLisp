@@ -167,8 +167,7 @@ register pointer argv[];
   if (iscode(mac)) {
 #if ARM
     eusinteger_t addr = (eusinteger_t)(mac->c.code.entry);
-    
-#if (WORD_SIZE == 64)    
+#if (WORD_SIZE == 64)
     addr &= ~3L;  /*0xfffffffc; ???? */
 #else
     addr &= ~3;  /*0xfffffffc; ???? */

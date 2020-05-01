@@ -117,7 +117,7 @@ fi
 
 travis_time_start install # Use this to install any prerequisites or dependencies necessary to run your build
 cd ${HOME}
-[ -e jskeus ] || git clone --depth 1 http://github.com/euslisp/jskeus jskeus
+[ -e jskeus ] || git clone --depth 1 --branch fix_triangulation --single-branch http://github.com/YoheiKakiuchi/jskeus jskeus
 ln -s $CI_SOURCE_PATH jskeus/eus
 ln -s `pwd`/jskeus/irteus   jskeus/eus/irteus
 travis_time_end
